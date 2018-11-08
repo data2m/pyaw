@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def core(request):
+def index(request):
     return HttpResponse("Hello world! Data2m") 
