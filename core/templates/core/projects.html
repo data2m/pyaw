@@ -3,20 +3,22 @@
 {% block content %}
 
 
-<table id="assets_table" class="table table-striped table-bordered">
+<table id="projects_table" class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>id</th>
       <th>identifier</th>
+      <th>name</th>
       <th>updated_at</th>
     </tr>
   </thead>
     <tbody>
-    {% for asset in assets %}
+    {% for project in projects %}
       <tr>
-        <td><a href="{% url 'core:asset' asset.id %}">{{ asset.id }}</a></td>
-        <td>{{ asset.identifier }}</td>
-        <td>{{ asset.updated_at }}</td>
+        <td><a href="{% url 'core:asset' project.id %}">{{ project.id }}</a></td>
+        <td>{{ project.identifier }}</td>
+        <td>{{ project.name }}</td>
+        <td>{{ project.updated_at }}</td>
       </tr>
     {% endfor %}
     </tbody>
@@ -31,7 +33,7 @@
 <script type="text/javascript" charset="utf8">
 
   $(document).ready( function () {
-  var table = $('#assets_table').DataTable();
+  var table = $('#projects_table').DataTable();
 } );
 
 </script>
