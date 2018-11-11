@@ -9,6 +9,9 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <!-- datatables.net -->
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css"   rel="stylesheet" type="text/css">
+
     {% block css  %}
     {% endblock %}
 
@@ -22,6 +25,7 @@
       <a class="navbar-brand" href="{% url 'core:index' %}">data2m Home</a>
         <ul class="nav navbar-nav">
           <li><a href="{% url 'core:index' %}">Index</a></li>
+          <li><a href="{% url 'core:assets' %}">Assets</a></li>
         </ul>
     </div>
   </nav>
@@ -43,6 +47,10 @@
         crossorigin="anonymous"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- datatables.net -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
 
 {% block scripts %}
   <!--- some scripts that apply to all pages -->
